@@ -1,0 +1,17 @@
+@model Assn8.Models.Student
+
+<form method="post">
+    <label>Name</label><br />
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span><br />
+
+    <label>Department</label><br />
+    <input asp-for="Department" />
+    <span asp-validation-for="Department"></span><br />
+
+    <label>Marks</label><br />
+    <input asp-for="Marks" />
+    <span asp-validation-for="Marks"></span><br /><br />
+
+    <button type="submit">Save</button>
+</form>

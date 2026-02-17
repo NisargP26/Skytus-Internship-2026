@@ -1,0 +1,28 @@
+@model List<MvcBasicsApp.Models.Student>
+
+<h2>Student List</h2>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Marks</th>
+    </tr>
+
+@foreach (var student in Model)
+{
+    <tr>
+        <td>@student.Id</td>
+        <td>@student.Name</td>
+        <td>@student.Department</td>
+        <td>@student.Marks</td>
+    </tr>
+}
+</table>
+<h3>Student Summary</h3>
+
+@foreach (var student in Model)
+{
+    @await Html.PartialAsync("_StudentSummary", student)
+}

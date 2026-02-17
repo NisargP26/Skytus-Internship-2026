@@ -1,0 +1,21 @@
+@model CrudMvcApp.Models.Student
+
+<h2>Edit Student</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <label>Name:</label><br />
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span><br />
+
+    <label>Department:</label><br />
+    <input asp-for="Department" />
+    <span asp-validation-for="Department"></span><br />
+
+    <label>Marks:</label><br />
+    <input asp-for="Marks" />
+    <span asp-validation-for="Marks"></span><br /><br />
+
+    <button type="submit">Update</button>
+</form>

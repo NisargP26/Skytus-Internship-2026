@@ -1,0 +1,13 @@
+@model Student
+
+<div class="card h-100 shadow-sm">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Name</h5>
+        <p class="card-text mb-1"><strong>Email:</strong> @Model.Email</p>
+        <p class="card-text mb-1"><strong>Course:</strong> @Model.Course</p>
+        <p class="card-text"><strong>Average Score:</strong> @Model.AverageScore</p>
+    </div>
+    <div class="card-footer bg-transparent border-top-0">
+        <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-outline-primary btn-sm">View Details</a>
+    </div>
+</div>
