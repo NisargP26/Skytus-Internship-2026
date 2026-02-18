@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #f1f5f9;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: #1e293b;
+}
+
+.user-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-card {
+  background: white;
+  padding: 1.5rem;
+  width: 200px;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Highlight active users */
+.user-card.active {
+  border-color: #22c55e;
+  background: #ecfdf5;
+}
+
+.user-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.user-card p {
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #6366f1;
+  color: white;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.empty {
+  color: #64748b;
+  font-size: 1.1rem;
+}

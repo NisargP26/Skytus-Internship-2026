@@ -1,0 +1,197 @@
+/* =========================
+   Global Reset & Fluid Base
+========================= */
+
+:root {
+  --primary: #2563eb;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --gray: #64748b;
+  --border: #e2e8f0;
+}
+
+html {
+  font-size: clamp(14px, 1.1vw, 16px);
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Ubuntu, sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* =========================
+   Header (Fluid + Wrap)
+========================= */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: clamp(0.8rem, 2vw, 1.25rem);
+  background-color: white;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: clamp(1.4rem, 2.5vw, 1.7rem);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.search {
+  flex: 1 1 220px;
+  min-width: 180px;
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  gap: clamp(0.8rem, 2vw, 1.4rem);
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.nav a:hover {
+  color: var(--primary);
+}
+
+/* =========================
+   Banner (Fluid Typography)
+========================= */
+.banner {
+  text-align: center;
+  padding: clamp(3rem, 6vw, 5rem) 1rem;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: white;
+}
+
+.banner h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  margin-bottom: 0.75rem;
+}
+
+.banner p {
+  max-width: 40ch;
+  margin-inline: auto;
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  opacity: 0.9;
+}
+
+.banner button {
+  margin-top: 1.6rem;
+  padding: 0.7rem 1.8rem;
+  border-radius: 0.6rem;
+  border: none;
+  font-weight: 600;
+  background: white;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+/* =========================
+   Products Section
+========================= */
+.products-section {
+  max-width: min(1200px, 92%);
+  margin-inline: auto;
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+.products-section h2 {
+  text-align: center;
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  margin-bottom: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+/* Truly Responsive Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: clamp(1.2rem, 3vw, 2rem);
+}
+
+/* =========================
+   Product Card (Elastic)
+========================= */
+.product-card {
+  background: white;
+  border-radius: 0.9rem;
+  padding: 1.1rem;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.product-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.product-card p {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.9rem;
+}
+
+.product-card button {
+  margin-top: auto;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* =========================
+   Footer
+========================= */
+.footer {
+  text-align: center;
+  padding: 1.4rem;
+  background: white;
+  border-top: 1px solid var(--border);
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+/* =========================
+   Small Devices Polish
+========================= */
+@media (max-width: 420px) {
+  .nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .banner p {
+    padding-inline: 0.5rem;
+  }
+}
