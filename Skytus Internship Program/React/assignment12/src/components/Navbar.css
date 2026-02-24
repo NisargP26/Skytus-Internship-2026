@@ -1,0 +1,17 @@
+.navbar {
+  padding: 18px 40px;
+  background: rgba(20, 20, 35, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar a {
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  color: #6c63ff;
+}
