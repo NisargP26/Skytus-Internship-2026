@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+.sidebar-width {
+  width: 240px;
+}
+
+@media (max-width: 991px) {
+  .sidebar-width {
+    width: 100%;
+  }
+}
